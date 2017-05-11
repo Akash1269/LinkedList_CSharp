@@ -10,6 +10,21 @@ namespace LinkedList_CSharp
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Welcome to Linked Program");
+            Console.WriteLine("\n\nPlease enter numbers to be inserted into the list in space separated format");
+
+            string[] temp = Console.ReadLine().Split(' ');
+            int[] values = Array.ConvertAll(temp, int.Parse);
+
+            LinkedList list = new LinkedList();
+
+            foreach (int item in values)
+            {
+                list.InsertAtStart(item);
+            }
+            list.PrintList();
+            
+            Console.Read();
         }
     }
 }
